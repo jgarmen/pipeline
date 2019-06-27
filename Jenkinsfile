@@ -1,15 +1,12 @@
 pipeline {
-   agent any
+   agent {
+      label 'windows'
+      }
    stages{
        stage('saludo'){
            steps{
                echo 'hola'
            }
-       }
-       stage('despedida'){
-           steps{
-               echo 'adios'
-           }
-       }
+       }       
    }
 }
